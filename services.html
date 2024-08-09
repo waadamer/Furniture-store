@@ -13,17 +13,16 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
     />
+<!-- Font Awesome -->
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    
 
     <!-- Boxicons -->
     <link
@@ -46,8 +45,91 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
+    <title>About us</title>
 
-    <title>Furni</title>
+    <style>
+      #main h1,
+      #main p,
+      .shop,
+      .explore {
+        text-align: left;
+      }
+
+      .contant {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      #choose .first {
+        margin-top: 10%;
+      }
+      .contant p {
+        font-size: 14px;
+      }
+      .contant h4 {
+        font-size: 18px;
+      }
+
+      .icon img {
+        width: 40px;
+      }
+
+      .icon .fa-circle {
+        width: 30px;
+        height: 30px;
+        left: 4%;
+      }
+
+      #contact .Subscribe {
+        margin-left: 10%;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        color: rgb(59, 93, 80);
+      }
+      .my-input {
+        margin-left: 11%;
+      }
+      .input {
+        padding: 0.5%;
+        margin-top: 1%;
+        width: 25% !important;
+        border: 1px solid #777676;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(186, 186, 187);
+      }
+      .plane {
+        background-color: #3b5d50;
+        border: none;
+        border-radius: 20%;
+        padding: 7px;
+        width: 3%;
+        margin-left: 1%;
+      }
+      .paper-icon {
+        height: 20px;
+      }
+      @media (max-width: 767.98px) {
+        #main .btn,
+        #product .btn {
+          display: inline;
+        }
+
+        #choose .first {
+          margin-top: 0%;
+        }
+        .input {
+        width: 50% !important;
+      }
+      .plane {
+        width: 10%;
+      }
+     
+      }
+    </style>
   </head>
   <body>
     <section id="nav-bar">
@@ -69,7 +151,7 @@
             <div class="navbar-nav ml-auto">
               <ul class="navbar-nav mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Home</a>
+                  <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="shop.html">Shop</a>
@@ -78,7 +160,7 @@
                   <a class="nav-link" href="about.html">About us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="services.html">Services</a>
+                  <a class="nav-link active" href="#">Services</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="Blog.html">Blog</a>
@@ -92,9 +174,7 @@
                   <a href="#" class="nav-link"><i class="bx bx-user"></i> </a>
                 </li>
                 <li class="nav-item">
-                  <a href="cart.html" class="nav-link"
-                    ><i class="bx bx-cart"></i>
-                  </a>
+                  <a href="cart.html" class="nav-link"><i class="bx bx-cart"></i> </a>
                 </li>
               </ul>
             </div>
@@ -108,10 +188,7 @@
       <div class="container-fluid main">
         <div class="row">
           <div class="col-md-6 no-ml-md">
-            <h1>
-              Modern Interior <br />
-              Design Studio
-            </h1>
+            <h1>Services</h1>
             <p>
               Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
               velit. Aliquam vulputate <br />
@@ -124,6 +201,128 @@
           <div class="col-md-6 text-center position-relative">
             <div class="dots-background"></div>
             <img src="img/couch.png" class="img-fluid couch-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------>
+
+    <section id="choose">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <div class="row no-gutters">
+              <div class="col-lg-6 col-md-3 first">
+                <div class="contant d-flex md-justify-content-between">
+                  <div class="track">
+                    <div class="icon">
+                      <img src="img/truck.svg" class="image-fluid" />
+                      <i class="fa fa-circle"></i>
+                    </div>
+                    <h4>Fast & Free Shipping</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                  <div class="bag">
+                    <div class="icon">
+                      <img src="img/bag.svg" class="image-fluid" /><i
+                        class="fa fa-circle"
+                      ></i>
+                    </div>
+                    <h4>Easy to Shop</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-3 col-sm-12 first">
+                <div class="contant d-flex md-justify-content-between">
+                  <div class="sup">
+                    <div class="icon">
+                      <img src="img/support.svg" class="image-fluid" /><i
+                        class="fa fa-circle"
+                      ></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                  <div class="ret">
+                    <div class="icon">
+                      <img src="img/return.svg" class="image-fluid" /><i
+                        class="fa fa-circle"
+                      ></i>
+                    </div>
+                    <h4>Hassle Free Returns</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-3 col-sm-12">
+                <div class="contant d-flex md-justify-content-between">
+                  <div class="track">
+                    <div class="icon">
+                      <img src="img/truck.svg" class="image-fluid" />
+                      <i class="fa fa-circle"></i>
+                    </div>
+                    <h4>Fast & Free Shipping</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                  <div class="bag">
+                    <div class="icon">
+                      <img src="img/bag.svg" class="image-fluid" /><i
+                        class="fa fa-circle"
+                      ></i>
+                    </div>
+                    <h4>Easy to Shop</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-3 col-sm-12">
+                <div class="contant d-flex justify-content-between">
+                  <div class="sup">
+                    <div class="icon">
+                      <img src="img/support.svg" class="image-fluid" /><i
+                        class="fa fa-circle"
+                      ></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                  <div class="ret">
+                    <div class="icon">
+                      <img src="img/return.svg" class="image-fluid" /><i
+                        class="fa fa-circle"
+                      ></i>
+                    </div>
+                    <h4>Hassle Free Returns</h4>
+                    <p>
+                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+                      aliquet velit. Aliquam vulputate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -193,190 +392,8 @@
         </div>
       </div>
     </section>
-    <!------------why choose us--------------------------------------------------------------------------------------------->
-    <section id="choose">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 mb-5 mb-lg-0">
-            <h1>Why Choose Us</h1>
-            <p class="promo-title">
-              Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
-              velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
-            </p>
-            <div class="row">
-              <div class="col-6 mb-4">
-                <div class="contant">
-                  <div class="track">
-                    <div class="icon">
-                      <img src="img/truck.svg" class="image-fluid" />
-                      <i class="fa fa-circle"></i>
-                    </div>
-                    <h4>Fast & Free Shipping</h4>
-                    <p>
-                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                      aliquet velit. Aliquam vulputate.
-                    </p>
-                  </div>
-                  <div class="bag">
-                    <div class="icon">
-                      <img src="img/bag.svg" class="image-fluid" /><i
-                        class="fa fa-circle"
-                      ></i>
-                    </div>
-                    <h4>Easy to Shop</h4>
-                    <p>
-                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                      aliquet velit. Aliquam vulputate.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 mb-4">
-                <div class="contant">
-                  <div class="sup">
-                    <div class="icon">
-                      <img src="img/support.svg" class="image-fluid" /><i
-                        class="fa fa-circle"
-                      ></i>
-                    </div>
-                    <h4>24/7 Support</h4>
-                    <p>
-                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                      aliquet velit. Aliquam vulputate.
-                    </p>
-                  </div>
-                  <div class="ret">
-                    <div class="icon">
-                      <img src="img/return.svg" class="image-fluid" /><i
-                        class="fa fa-circle"
-                      ></i>
-                    </div>
-                    <h4>Hassle Free Returns</h4>
-                    <p>
-                      Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                      aliquet velit. Aliquam vulputate.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!------------------------------------------------------------------------------------------------------------>
 
-          <div class="col-md-12 col-lg-6 text-center position-relative">
-            <div class="dots-background"></div>
-            <img src="img/why-choose-us-img.jpg" class="img-fluid choose-img" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!------------we help you ... -------->
-    <section id="help">
-      <div class="container-fluid">
-        <div class="row">
-          <div
-            class="col-lg-7 col-md-12 mb-5 mb-lg-0 text-center position-relative"
-          >
-            <div class="dots-background"></div>
-            <div class="imgs-grid">
-              <div class="grid grid-1"><img src="img/img-grid-1.jpg" /></div>
-              <div class="grid grid-2"><img src="img/img-grid-2.jpg" /></div>
-              <div class="grid grid-3"><img src="img/img-grid-3.jpg" /></div>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-12 ps-lg-5 expalne">
-            <h1>We Help You Make Modern Interior Design</h1>
-            <p class="promo-title">
-              Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio
-              quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-              vulputate velit imperdiet dolor tempor tristique. Pellentesque
-              habitant morbi tristique senectus et netus et malesuada.
-            </p>
-            <div class="row">
-              <div class="col-6">
-                <ul class="help-list">
-                  <li class="help-item help1">
-                    <p>Donec vitae odio quis nisl dapibus malesuada</p>
-                  </li>
-                  <li class="help-item help2">
-                    <p>Donec vitae odio quis nisl dapibus malesuada</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="help-list">
-                  <li class="help-item help3">
-                    <p>Donec vitae odio quis nisl dapibus malesuada</p>
-                  </li>
-                  <li class="help-item help4">
-                    <p>Donec vitae odio quis nisl dapibus malesuada.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <button class="btn Explore">Explore</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-----------------------small----------------->
-    <section id="small">
-      <div class="container-fluid">
-        <div class="row offset-1">
-          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 small">
-            <div class="product-details d-flex">
-              <div class="img-det">
-                <i class="fa fa-stop Nordic"></i>
-                <img src="img/product-1.png" class="product-img" />
-              </div>
-              <div class="product-info">
-                <h5>Nordic Chair</h5>
-                <p>
-                  Donec facilisis quam ut purus rutrum lobortis. Donec vitae
-                  odio <br />
-                </p>
-                <a href="#">Read more</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 small">
-            <div class="product-details d-flex">
-              <div class="img-det">
-                <i class="fa fa-stop Kruzo"></i>
-                <img src="img/product-2.png" class="product-img" />
-              </div>
-              <div class="product-info">
-                <h5>Kruzo Aero Chair</h5>
-                <p>
-                  Donec facilisis quam ut purus rutrum lobortis. Donec vitae
-                  odio <br />
-                </p>
-                <a href="#">Read more</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 small">
-            <div class="product-details d-flex">
-              <div class="img-det">
-                <i class="fa fa-stop Ergonomic"></i>
-                <img src="img/product-3.png" class="product-img" />
-              </div>
-              <div class="product-info">
-                <h5>Ergonomic Chair</h5>
-                <p>
-                  Donec facilisis quam ut purus rutrum lobortis. Donec vitae
-                  odio <br />
-                </p>
-                <a href="#">Read more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--------------------------------------------------------------->
     <section id="testimonial">
       <div
         id="carousel"
@@ -469,43 +486,6 @@
           data-bs-target="#carousel"
           data-bs-slide="next"
         ></button>
-      </div>
-    </section>
-
-    <!-------------------------------------------------------->
-    <section id="recent">
-      <div class="container-fluid">
-        <div class="row text">
-          <div class="col-md-6">
-            <h3>Recent Blog</h3>
-          </div>
-          <div class="col-md-6 text-end">
-            <a href="#">View All Posts</a>
-          </div>
-        </div>
-        <div class="row image">
-          <div class="col-12 col-sm-4 col-md-4 custom-column">
-            <img src="img/post-1.jpg" class="recent-img" />
-            <p>
-              First Time Home Owner Ideas <b> by</b> Kristin Watson
-              <b> on</b> Dec 19, 2021
-            </p>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 custom-column">
-            <img src="img/post-2.jpg" class="recent-img" />
-            <p>
-              How To Keep Your Furniture Clean <b> by</b> Robert Fox <b> on</b>
-              Dec 15, 2021
-            </p>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 custom-column">
-            <img src="img/post-3.jpg" class="recent-img" />
-            <p>
-              Small Space Furniture Apartment Ideas <b> by</b> Kristin Watson
-              <b> on </b> Dec 12, 2021
-            </p>
-          </div>
-        </div>
       </div>
     </section>
     <!--------------------------------------------------------------->
@@ -608,8 +588,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
   </body>
 </html>

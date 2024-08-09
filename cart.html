@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+
+    <title>Cart</title>
+    <style>
+      #cart {
+        background-color: #eff2f1;
+      }
+      #cart img {
+        width: 70% !important;
+        width: 100%;
+        table-layout: fixed;
+        display: block;
+      }
+
+      /******** table 1 *********/
+      .cart-table {
+        margin-top: 15% !important;
+      }
+      .cart-table thead th {
+        border-bottom: 2px solid black;
+        border-top: none;
+      }
+
+      .cart-table th,
+      .cart-table td {
+        width: 16.66%;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+      }
+
+      .cart-table th.large,
+      .cart-table td.large {
+        width: 25%;
+      }
+
+      .cart-table th:not(.large),
+      .cart-table td:not(.large) {
+        width: 12.5%;
+      }
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+      }
+
+      .quantity-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 25px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+      }
+
+      .quantity-btn:focus {
+        outline: none;
+      }
+
+      .quantity-input {
+        width: 55px !important;
+        height: 55px !important;
+        text-align: center;
+        border: 1px solid #dee2e6;
+        font-size: 15px;
+        margin: 0 5px;
+        background-color: #fff;
+      }
+      .prod {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        color: rgb(0, 0, 0);
+      }
+
+      .pri {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      /************botton **************/
+
+      #cart .btn {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        padding: 8px 30px;
+        margin-left: 2%;
+        margin-right: 15%;
+        margin-top: 5%;
+      }
+      .coupon-container {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        margin-top: 10px;
+      }
+
+      .cop-input {
+        width: 100%;
+        border: 2px solid #d1d8dd;
+        border-radius: 10px;
+        padding: 10px 8px;
+        margin-right: 10px;
+        margin-top: 5%;
+        flex: 1;
+      }
+
+      .coupon {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-top: 8%;
+      }
+      .Apply {
+        width: 35%;
+        margin-left: 0;
+        margin-right: 0;
+        white-space: nowrap;
+      }
+      /******** table 2 *********/
+
+      .align-items-end {
+        text-align: left;
+      }
+      .cart-total {
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+      }
+      .cart-total thead {
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      .cart-total thead th {
+        width: 100%;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 28px;
+        border-bottom: 1px solid #d9dbda;
+      }
+      .cart-total tr {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+      }
+      .cart-total th,
+      .cart-total td {
+        vertical-align: middle;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 767.98px) {
+        #main h1 {
+          text-align: left;
+        }
+        .prod {
+          font-size: 12px;
+        }
+        #cart .row {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        #cart .btn {
+          font-size: 10px;
+          padding: 8px 14px;
+          margin-left: 2%;
+          margin-right: 0;
+          margin-top: 0;
+        }
+
+        .cop-input {
+          width: 90% !important;
+          border: 2px solid #d1d8dd;
+          border-radius: 10px;
+          margin-top: 5%;
+          margin-bottom: 5%;
+          margin-left: 10px;
+        }
+
+        .coupon-container {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .cop-input {
+          width: 100%;
+          border: 2px solid #d1d8dd;
+          border-radius: 10px;
+          padding: 10px 8px;
+          margin-right: 10px;
+          margin-top: 5%;
+          flex: 1;
+        }
+
+        .coupon {
+          font-size: 16px;
+        }
+        .Apply {
+          width: 90%;
+          margin-bottom: 15%;
+        }
+        .cart-total {
+          width: 100%;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg navbar-dark g-dark">
+        <a class="navbar-brand" href="#">Furni<span>.</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navBar"
+          aria-controls="navBar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navBar">
+            <div class="navbar-nav ml-auto">
+              <ul class="navbar-nav mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+              </ul>
+              <ul class="navBar-nav mb-2 mb-md-0 ms-5">
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><i class="bx bx-user"></i> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><i class="bx bx-cart"></i> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------>
+    <section id="main">
+      <div class="container-fluid main">
+        <div class="row">
+          <div class="col-md-6 no-ml-md">
+            <h1 style="margin-bottom: 20%">Cart</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------------------------------------------------------->
+    <section id="cart">
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table cart-table">
+            <thead>
+              <tr>
+                <th scope="col" class="large">Image</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><img src="img/product-1.png" alt="" /></th>
+                <td class="prod">Product 1</td>
+                <td class="pri">$49.00</td>
+                <td>
+                  <div class="quantity-control">
+                    <button class="quantity-btn">-</button>
+                    <input
+                      type="text"
+                      name="quantity"
+                      value="1"
+                      class="quantity-input"
+                      readonly
+                    />
+                    <button class="quantity-btn">+</button>
+                  </div>
+                </td>
+
+                <td class="pri">$49.00</td>
+                <td>x</td>
+              </tr>
+              <tr>
+                <th><img src="img/product-2.png" alt="" /></th>
+                <td class="prod">Product 2</td>
+                <td class="pri">$49.00</td>
+                <td>
+                  <div class="quantity-control">
+                    <button class="quantity-btn">-</button>
+                    <input
+                      type="text"
+                      name="quantity"
+                      value="1"
+                      class="quantity-input"
+                      readonly
+                    />
+                    <button class="quantity-btn">+</button>
+                  </div>
+                </td>
+                <td class="pri">$49.00</td>
+                <td>x</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <button class="btn btn-dark">Update Cart</button>
+          <button class="btn btn-dark">Continue Shopping</button>
+        </div>
+
+        <div class="row d-flex justify-content-between">
+          <div class="col-lg-6 d-flex flex-column">
+            <p class="coupon">Coupon</p>
+            <p>Enter your coupon code if you have one.</p>
+            <div class="coupon-container">
+              <input
+                class="cop-input form-control-lg"
+                type="text"
+                id="text"
+                placeholder="Coupon Code"
+              />
+              <button class="btn btn-dark Apply">Apply Coupon</button>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex flex-column align-items-end">
+            <table class="cart-total">
+              <thead>
+                <tr>
+                  <th scope="col">CART TOTALS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>subtotal</th>
+                  <td>$230.00</td>
+                </tr>
+                <tr>
+                  <th>Total</th>
+                  <td>$230.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-dark mr-5">Proceed To Checkout</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------------------------------------------------------->
+    <section id="image">
+      <img src="img/sofa.png" class="sofa-img" />
+    </section>
+    <!--------------------------------------------------->
+    <section id="contact">
+      <div class="Subscribe">
+        <img src="img/envelope-outline.svg" />
+        Subscribe to Newsletter
+      </div>
+
+      <div class="my-input">
+        <input class="input" type="text" placeholder="Enter your name" />
+        <input class="input" type="text" placeholder="Enter your email" />
+        <a href="#"
+          ><button class="plane">
+            <img
+              src="img/icons8-paper-plane-50.png"
+              class="paper-icon"
+            /></button
+        ></a>
+      </div>
+    </section>
+
+    <!--------------------------------------------------------->
+    <footer>
+      <div class="container-fluid footer-container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-sm-12 column">
+            <a href="#" class="ftitle">Furni<span>.</span></a>
+            <p class="fdetails">
+              Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio
+              quis nisl dap ibus malesuada. Nullam ac aliquet velit . Aliquam
+              vulputate velit imperdiet dolor tempor tristique. Pellentesque
+              habitant
+            </p>
+            <div class="social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 column c1">
+            <ul style="list-style: none">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-3 column c1">
+            <ul style="list-style: none">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Knowledge base</a></li>
+              <li><a href="#">Live chat</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-3 column c1">
+            <ul style="list-style: none">
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Our team</a></li>
+              <li><a href="#">Leadership</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-3 column c1">
+            <ul style="list-style: none">
+              <li><a href="#">Nordic Chair</a></li>
+              <li><a href="#"> Kruzo Aero</a></li>
+              <li><a href="#">Ergonomic Chair</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div id="copy">
+        <div class="container-fluid">
+          <div class="row text">
+            <div class="col-md-6">
+              <p>
+                Copyright ©2024. All Rights Reserved. — Designed with love by
+                Untree.co Distributed By ThemeWagon
+              </p>
+            </div>
+            <div class="col-md-6 text-end">
+              <p>
+                <a href="#" class="term">Terms & Conditions </a>
+                <span>.</span>
+                <a href="#" class="term">Privacy Policy </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

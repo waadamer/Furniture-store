@@ -172,7 +172,6 @@ span {
   z-index: 1;
 }
 
-
 @media (max-width: 767.98px) {
   #main h1,
   #main p,
@@ -471,8 +470,6 @@ span {
   display: block;
 }
 
-
-
 @media (max-width: 767.98px) {
   #choose h1,
   #choose p,
@@ -497,6 +494,9 @@ span {
   }
   .contant h4 {
     font-size: 15px;
+  }
+  .icon .fa-circle {
+    left: 8%;
   }
 }
 
@@ -1099,8 +1099,8 @@ span {
   .carousel-control-prev,
   .carousel-control-next {
     width: 40px;
-    height:40px;
-   }
+    height: 40px;
+  }
 }
 
 /**************recent******************************/
@@ -1264,14 +1264,21 @@ span {
   #contact .Subscribe {
     margin-top: 10%;
     margin-left: 10%;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
   }
   .my-input {
     margin-left: 10%;
   }
   .input {
-    width: 30%;
+    width: 20%;
+  }
+  .plane {
+    padding: 2px;
+    width: 3%;
+  }
+  .paper-icon {
+    height: 18px;
   }
 }
 
@@ -1292,15 +1299,13 @@ span {
     padding: 1%;
     width: 50% !important;
   }
- 
+
   .plane {
     padding: 5px;
     width: 15%;
     margin-right: 100%;
     margin-top: 2%;
   }
-
-
 }
 /***************footer***********************/
 
@@ -1338,19 +1343,24 @@ footer {
   gap: 10px;
 }
 
-.social a img {
-  width: 25px;
-  background-color: #cdded3;
+.social a  {
+  padding: 6px 8px;
   border-radius: 50%;
-  padding: 5px;
-  opacity: 0.6;
+  background-color: #c4c4c4;
+  color: #305044;
+  transition: color 0.5s, background-color 0.5s;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.social a i {
+  font-size:15px;
 }
 
-.social a img:hover {
-  background-color: #3b5d50;
-  border-radius: 50%;
-  padding: 5px;
-  opacity: 1;
+.social a:hover {
+  transition: color 0.5s, background-color 0.5s;
+  background-color: #305044;
+  color: white;
+  
 }
 .c1 {
   margin-top: 4%;
@@ -1418,7 +1428,7 @@ footer hr {
 
   .fdetails {
     font-size: 14px;
-    margin-left:0% !important;
+    margin-left: 0% !important;
   }
 
   .social {
