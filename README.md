@@ -1,1 +1,2 @@
-Home page for furniture store by HTML & css & Bootstrap 
+Hi everyone, this is my Html, CSS, Bootstrap project!
+Ready for any feedback :)
