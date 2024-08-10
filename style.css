@@ -146,7 +146,6 @@ span {
 }
 #main img {
   width: 100%;
-  max-width: 700px;
   height: auto;
 }
 .position-relative {
@@ -194,7 +193,7 @@ span {
     margin-top: 20%;
   }
   .dots-background {
-    left:60% !important;
+    left:80% !important;
   }
 }
 /*******************product**********************/
