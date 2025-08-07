@@ -2,8 +2,6 @@
 
 A modern and responsive furniture store website built using **HTML**, **CSS**, and **Bootstrap**.
 
-![Furniture Store Screenshot](https://raw.githubusercontent.com/waadamer/Furniture-store/main/images/your-screenshot.jpg)
-
 ## 🌟 Features
 
 - 🏠 Home page with 
